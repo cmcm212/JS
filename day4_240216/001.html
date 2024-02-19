@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="target">들어와 들어와</p>
+    <p>우리나라 좋은나라</p>
+    <button id="btn">지우기</button>
+    <script>
+        // 버튼을 클릭하면 p태그를 지우시오
+        // display속성을 none으로 준다. -> css
+
+        let $btn = $('#btn');
+        let $target = $('#target');
+        $btn.on('clicl', function() {
+            $target.css('display', 'none');
+        })
+
+    </script>
+</body>
+</html>

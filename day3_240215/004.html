@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="on">켜기</button>
+    <img>
+    <button id="off" disabled>끄기</button>
+    <script>
+        // 자바스크립트로 <img>에 pic_bulbon.gif를 출력하시오
+        let $on = $('#on');
+        let $img = $('#img');
+        let $off = $('#off');
+
+        $img.attr('src', "https://www.w3schools.com/js/pic_bulbon.gif");
+        $on.attr('disabled', true);
+
+        $('#on').on('click', function() {
+            $img.attr('src', 'https://www.w3schools.com/js/pic_bulbon.gif')
+            $on.attr('disabled', true);
+            $off.attr('disabled', false);
+        });
+        $('#off').on('click', function () {
+            $img.attr('src', "https://www.w3schools.com/js/pic_bulboff.gif")
+            $on.attr('disabled', false);
+            $off.attr('disabled', true);
+        });
+    </script>
+</body>
+</html>

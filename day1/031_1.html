@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>최저연봉 계산</h1>
+    <p>최저연봉 : <span id="target"></span></p>
+    <input type="text" id="pay" placeholder="시급 입력..."><br>
+    <button onclick="연봉계산()">최저 연봉 출력</button>
+    <script>
+        function 연봉계산() {
+            // 최저임금을 input에서 꺼낸다
+            const pay = $('#pay').val();
+            const sal = pay*209*12;
+            $('#target').text(sal+'원');
+        }
+    </script>
+</body>
+</html>

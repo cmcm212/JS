@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>곱셈하기</title>
+</head>
+<body>
+    <input type="text" id="val1"> *
+    <input type="text" id="val2"> =
+    <input type="text" id="result" disabled>
+    <button id="mul">곱하기</button>
+    <script>
+        let $val1 = $('#val1');
+        let $val2 = $('#val2');
+        let $result = $('#result');
+        let $mul = $('#mul');
+
+        $mul.on('click', function() {
+            let mult = parseInt($val1.val()) * parseInt($val2.val());
+            $result.val(mult);
+        })
+    </script>
+</body>
+</html>

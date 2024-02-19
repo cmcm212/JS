@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--키를 입력하면 적정체중을 출력하기 (적정체중 : 키-105)-->
+</head>
+<body>
+    <h1> 적정체중 출력 </h1>
+    <p>적정체중 : <span id="target"></span></p>
+    <input type="text" id="height" placeholder="키 입력">
+    <button onclick="weight();">출력</button>
+    <script>
+        function weight() {
+            const target = document.getElementById('target');
+            const height = document.getElementById('height');
+            const height2 = parseInt(height.value);
+            target.innerHTML = height2-105;
+        }
+    </script>
+</body>
+</html>

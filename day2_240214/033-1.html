@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 나이가 20세 이상이면 "성인" 아니면 "미성년자" -->
+    나이 : <input type="number" id="year">
+    <button onclick="adult();">출력</button>
+
+    <script>
+        function adult() {
+            let date = new Date();
+            let thisyear = date.getFullYear();
+            let year = $('#year').val();
+            let age = thisyear - year;
+
+            if(age>=20) {
+                alert("성인");
+            } else {
+                alert("미성년");
+            }
+        }
+    </script>
+</body>
+</html>

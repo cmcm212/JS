@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="good">추천</button>
+    <button id="bad">비추</button>
+    <button id="delete">삭제</button>
+    <script>
+        let $good = $('#good');
+        let $bad = $('#bad');
+        let $delete = $('#delete');
+
+        // 비로그인 - loginID: ''
+        let board = {
+            writer: 'spring',
+            loginId: ''
+        };
+        // 적절하게 버튼을 보이거나 안보이게 해주세요(hide())
+
+        // 비로그인 : 다 안눌러지게 해야 함
+        // 글쓴이 : 다 돼야 함
+        // 글쓴이 아닐 때 : 삭제가 안돼야 함
+        if(board.loginId==='') {
+            $good.attr('disabled', true);
+            $bad.attr('disabled', true);
+            $delete.attr('disabled', true);
+        } else if(board.loginId===board.writer) {
+            $good.attr('disabled', false);
+            $bad.attr('disabled', false);
+            $delete.attr('disabled', false);
+        } else if(board.loginId!==board.writer) {
+            $good.attr('disabled', false);
+            $bad.attr('disabled', false);
+            $delete.attr('disabled', true);
+        }
+    </script>
+</body>
+</html>
